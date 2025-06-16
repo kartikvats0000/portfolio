@@ -163,7 +163,7 @@ export default function Portfolio() {
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   My expertise spans the entire mobile development lifecycle, from UI/UX implementation to backend
-                  integration, state management, and app store deployment. I'm committed to writing clean, maintainable
+                  integration, state management, and app store deployment. I&apos;m committed to writing clean, maintainable
                   code and staying up-to-date with the latest Flutter developments.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-4">
@@ -292,11 +292,11 @@ export default function Portfolio() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>{"Let's Connect"}</CardTitle>
+                <CardTitle>Let&apos;s Connect</CardTitle>
                 <CardDescription>
-                  {
-                    "I'm always open to discussing new opportunities, collaborations, or just having a chat about Flutter development."
-                  }
+                  
+                  I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about Flutter development.
+                  
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
