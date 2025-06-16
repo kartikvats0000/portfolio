@@ -14,8 +14,6 @@ import {
   Calendar,
   Mail,
   Github,
-  Linkedin,
-  Twitter,
   ExternalLink,
   Star,
   GitFork,
@@ -23,7 +21,6 @@ import {
   Briefcase,
   GraduationCap,
   Award,
-  X,
   DownloadIcon,
 } from "lucide-react"
 import Link from "next/link"
