@@ -358,7 +358,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="border-b">
+      <div >
         <div className="max-w-4xl mx-auto">
           {/* Cover Image */}
           <div className="h-48 md:h-64 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
@@ -406,8 +406,8 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center gap-1">
                   <LinkIcon className="w-4 h-4" />
-                  <Link href="https://kartikvats.com" className="text-blue-500 hover:underline">
-                    kartikvats.dev
+                  <Link href="https://kartikvats.com" target="blank" className="text-blue-500 hover:underline">
+                    kartikvats.com
                   </Link>
                 </div>
                 <div className="flex items-center gap-1">
