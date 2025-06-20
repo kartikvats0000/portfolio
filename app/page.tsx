@@ -1,13 +1,18 @@
-"use client"
+"use client";
 
-import { FaXTwitter, FaGithub, FaLinkedin} from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 
-
-import { useState } from "react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   MapPin,
   LinkIcon,
@@ -22,20 +27,18 @@ import {
   GraduationCap,
   Award,
   DownloadIcon,
-} from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-
- const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Path relative to the public folder
-    link.download = "Kartik Vats Resume.pdf";  // Suggested filename for the user
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/resume.pdf"; // Path relative to the public folder
+  link.download = "Kartik Vats Resume.pdf"; // Suggested filename for the user
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 const tabs = [
   { id: "about", label: "About", icon: Code },
@@ -43,17 +46,17 @@ const tabs = [
   { id: "experience", label: "Experience", icon: Briefcase },
   { id: "skills", label: "Skills", icon: Award },
   { id: "contact", label: "Contact", icon: Mail },
-]
+];
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Flutter App",
+    title: "The Beyond Lifestyle App",
     description:
-      "A complete e-commerce mobile application built with Flutter and Firebase. Features include user authentication, product catalog, shopping cart, and payment integration.",
+      "A Complete mindfulness and wellness app with guided meditations, Customisations with Themes, and many wellness features like Podcasts, Talk To Me and Know Yourself. Built with Flutter and Node.JS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "Firebase", "Stripe", "Provider"],
-    github: "https://github.com",
+    technologies: ["Flutter", "Firebase", "NodeJs", "Provider"],
+    github: "https://thebeyondlifestyle.com",
     demo: "https://demo.com",
     stars: 45,
     forks: 12,
@@ -82,7 +85,7 @@ const projects = [
     stars: 28,
     forks: 6,
   },
-]
+];
 
 const experiences = [
   {
@@ -124,24 +127,39 @@ const experiences = [
       "Received 'Developer of the Month' award twice",
     ],
   },
-]
+];
 
 const skills = [
-  { category: "Mobile Development", items: ["Flutter", "Dart", "Android", "iOS", "React Native"] },
-  { category: "Backend & APIs", items: ["Firebase", "Node.js", "REST APIs", "GraphQL", "MongoDB"] },
-  { category: "State Management", items: ["Provider", "Bloc", "Riverpod", "GetX", "Redux"] },
-  { category: "Tools & Platforms", items: ["Git", "Docker", "AWS", "Google Cloud", "Figma"] },
-  { category: "Testing", items: ["Unit Testing", "Widget Testing", "Integration Testing", "Mockito"] },
-]
+  {
+    category: "Mobile Development",
+    items: ["Flutter", "Dart", "Android", "iOS", "React Native"],
+  },
+  {
+    category: "Backend & APIs",
+    items: ["Firebase", "Node.js", "REST APIs", "GraphQL", "MongoDB"],
+  },
+  {
+    category: "State Management",
+    items: ["Provider", "Bloc", "Riverpod", "GetX", "Redux"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "Docker", "AWS", "Google Cloud", "Figma"],
+  },
+  {
+    category: "Testing",
+    items: ["Unit Testing", "Widget Testing", "Integration Testing", "Mockito"],
+  },
+];
 
 ///CONTACT
-const email = 'kartik.vats0000@gmail.com'
-const linkedIn  = 'https://www.linkedin.com/in/kartik-vats-flutter/'
-const github = 'https://github.com/kartikvats0000'
-const twitter = 'https://x.com/kartikvats0000'
+const email = "kartik.vats0000@gmail.com";
+const linkedIn = "https://www.linkedin.com/in/kartik-vats-flutter/";
+const github = "https://github.com/kartikvats0000";
+const twitter = "https://x.com/kartikvats0000";
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("about")
+  const [activeTab, setActiveTab] = useState("about");
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -157,25 +175,32 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Passionate Flutter developer with 4+ years of experience building beautiful, performant mobile
-                  applications. I specialize in creating cross-platform solutions that deliver native-like experiences
-                  on both iOS and Android.
+                  Hi, I’m Kartik Vats — an app developer with nearly three years
+                  of experience building and maintaining thoughtful and
+                  functional mobile applications. My work focuses on creating
+                  tools that genuinely help users, whether it’s a productivity
+                  app, a wellness tool, or something in between. I enjoy turning
+                  ideas into polished, real-world products that work smoothly
+                  and feel intuitive.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  My expertise spans the entire mobile development lifecycle, from UI/UX implementation to backend
-                  integration, state management, and app store deployment. I&apos;m committed to writing clean, maintainable
-                  code and staying up-to-date with the latest Flutter developments.
+                  What drives me is a strong passion for clean, modern UI and
+                  detail-oriented design. I believe great design isn’t just
+                  about how something looks, but how effortlessly it works — and
+                  I carry that belief into every project I take on. I’m always
+                  looking to create experiences that not only solve problems but
+                  also feel good to use.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-4">
-                  <Badge variant="secondary">🎯 Problem Solver</Badge>
-                  <Badge variant="secondary">🚀 Performance Enthusiast</Badge>
-                  <Badge variant="secondary">📱 Mobile First</Badge>
-                  <Badge variant="secondary">🎨 UI/UX Focused</Badge>
+                  <Badge variant="secondary">🛠️ Builds Real-World Apps</Badge>
+                  <Badge variant="secondary">⚡ Fast & Clean Code</Badge>
+                  <Badge variant="secondary">📲 Thoughtful Mobile Experiences</Badge>
+                  <Badge variant="secondary">🧠 Design-Driven Thinking</Badge>
                 </div>
               </CardContent>
             </Card>
           </div>
-        )
+        );
 
       case "projects":
         return (
@@ -196,15 +221,23 @@ export default function Portfolio() {
                     <div className="flex items-start justify-between mb-3">
                       <CardTitle className="text-xl">{project.title}</CardTitle>
                       <div className="flex gap-2">
-                        <Link href={project.github} className="text-muted-foreground hover:text-foreground">
+                        <Link
+                          href={project.github}
+                          className="text-muted-foreground hover:text-foreground"
+                        >
                           <Github className="w-5 h-5" />
                         </Link>
-                        <Link href={project.demo} className="text-muted-foreground hover:text-foreground">
+                        <Link
+                          href={project.demo}
+                          className="text-muted-foreground hover:text-foreground"
+                        >
                           <ExternalLink className="w-5 h-5" />
                         </Link>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech) => (
                         <Badge key={tech} variant="outline">
@@ -227,7 +260,7 @@ export default function Portfolio() {
               </Card>
             ))}
           </div>
-        )
+        );
 
       case "experience":
         return (
@@ -241,18 +274,25 @@ export default function Portfolio() {
                       <CardDescription className="text-lg font-medium text-foreground mt-1">
                         {exp.company}
                       </CardDescription>
-                      <p className="text-sm text-muted-foreground mt-1">{exp.duration}</p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {exp.duration}
+                      </p>
                     </div>
                     <Briefcase className="w-6 h-6 text-muted-foreground" />
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {exp.description}
+                  </p>
                   <div className="space-y-2">
                     <h4 className="font-medium">Key Achievements:</h4>
                     <ul className="space-y-1">
                       {exp.achievements.map((achievement, index) => (
-                        <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <li
+                          key={index}
+                          className="text-sm text-muted-foreground flex items-start gap-2"
+                        >
                           <span className="text-green-500 mt-1">•</span>
                           {achievement}
                         </li>
@@ -263,7 +303,7 @@ export default function Portfolio() {
               </Card>
             ))}
           </div>
-        )
+        );
 
       case "skills":
         return (
@@ -271,12 +311,18 @@ export default function Portfolio() {
             {skills.map((skillGroup) => (
               <Card key={skillGroup.category}>
                 <CardHeader>
-                  <CardTitle className="text-lg">{skillGroup.category}</CardTitle>
+                  <CardTitle className="text-lg">
+                    {skillGroup.category}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="text-sm py-1 px-3">
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="text-sm py-1 px-3"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -285,7 +331,7 @@ export default function Portfolio() {
               </Card>
             ))}
           </div>
-        )
+        );
 
       case "contact":
         return (
@@ -294,9 +340,9 @@ export default function Portfolio() {
               <CardHeader>
                 <CardTitle>Let&apos;s Connect</CardTitle>
                 <CardDescription>
-                  
-                  I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about Flutter development.
-                  
+                  I&apos;m always open to discussing new opportunities,
+                  collaborations, or just having a chat about Flutter
+                  development.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -312,25 +358,29 @@ export default function Portfolio() {
                     </div>
                   </Link>
                   <Link
-                    href = {linkedIn}
+                    href={linkedIn}
                     target="blank"
                     className="flex items-center gap-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors"
                   >
                     <FaLinkedin className="w-5 h-5 text-white" />
                     <div>
                       <p className="font-medium">LinkedIn</p>
-                      <p className="text-sm text-muted-foreground">{linkedIn.split('https://')[1]}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {linkedIn.split("https://")[1]}
+                      </p>
                     </div>
                   </Link>
                   <Link
-                    href= {github}
+                    href={github}
                     target="blank"
                     className="flex items-center gap-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors"
                   >
                     <FaGithub className="w-5 h-5 text-white" />
                     <div>
                       <p className="font-medium">GitHub</p>
-                      <p className="text-sm text-muted-foreground">{github.split('https://')[1]}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {github.split("https://")[1]}
+                      </p>
                     </div>
                   </Link>
                   <Link
@@ -341,24 +391,26 @@ export default function Portfolio() {
                     <FaXTwitter className="w-5 h-5 text-white" />
                     <div>
                       <p className="font-medium">X</p>
-                      <p className="text-sm text-muted-foreground">@{twitter.split('https://x.com/')[1]}</p>
+                      <p className="text-sm text-muted-foreground">
+                        @{twitter.split("https://x.com/")[1]}
+                      </p>
                     </div>
                   </Link>
                 </div>
               </CardContent>
             </Card>
           </div>
-        )
+        );
 
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div >
+      <div>
         <div className="max-w-4xl mx-auto">
           {/* Cover Image */}
           <div className="h-48 md:h-64 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
@@ -373,13 +425,18 @@ export default function Portfolio() {
                 {/* Avatar positioned to overlap cover */}
                 <div className="relative -mt-16 md:-mt-20">
                   <Avatar className="w-32 h-32 border-4 border-background bg-background">
-                    <AvatarImage src="/profile.jpg?height=128&width=128" alt="Kartik Vats" />
+                    <AvatarImage
+                      src="/profile.jpg?height=128&width=128"
+                      alt="Kartik Vats"
+                    />
                     <AvatarFallback className="text-2xl">KV</AvatarFallback>
                   </Avatar>
                 </div>
                 {/* Name and handle positioned normally below cover */}
                 <div className="md:pb-2 md:pt-4">
-                  <h1 className="text-2xl md:text-3xl font-bold">Kartik Vats</h1>
+                  <h1 className="text-2xl md:text-3xl font-bold">
+                    Kartik Vats
+                  </h1>
                   <p className="text-muted-foreground">@kartikvats</p>
                 </div>
               </div>
@@ -397,7 +454,8 @@ export default function Portfolio() {
 
             <div className="mt-4 space-y-3">
               <p className="text-lg pt-4">
-                🚀 Flutter Developer | 📱 Mobile App Enthusiast | 💻 Cross-platform Solutions Expert
+                🚀 Flutter Developer | 📱 Mobile App Enthusiast | 💻
+                Cross-platform Solutions Expert
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-1 pb-1">
                 <div className="flex items-center gap-1">
@@ -406,7 +464,11 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center gap-1">
                   <LinkIcon className="w-4 h-4" />
-                  <Link href="https://kartikvats.com" target="blank" className="text-blue-500 hover:underline">
+                  <Link
+                    href="https://kartikvats.com"
+                    target="blank"
+                    className="text-blue-500 hover:underline"
+                  >
                     kartikvats.com
                   </Link>
                 </div>
@@ -417,10 +479,12 @@ export default function Portfolio() {
               </div>
               <div className="flex gap-4 text-sm pt-1 pb-1">
                 <span>
-                  <strong>10+</strong> <span className="text-muted-foreground">Projects</span>
+                  <strong>10+</strong>{" "}
+                  <span className="text-muted-foreground">Projects</span>
                 </span>
                 <span>
-                  <strong>1.2K</strong> <span className="text-muted-foreground">Followers</span>
+                  <strong>1.2K</strong>{" "}
+                  <span className="text-muted-foreground">Followers</span>
                 </span>
               </div>
             </div>
@@ -433,7 +497,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto">
           <nav className="flex overflow-x-auto">
             {tabs.map((tab) => {
-              const Icon = tab.icon
+              const Icon = tab.icon;
               return (
                 <button
                   key={tab.id}
@@ -447,7 +511,7 @@ export default function Portfolio() {
                   <Icon className="w-4 h-4" />
                   {tab.label}
                 </button>
-              )
+              );
             })}
           </nav>
         </div>
@@ -456,5 +520,5 @@ export default function Portfolio() {
       {/* Content */}
       <div className="max-w-4xl mx-auto p-4">{renderTabContent()}</div>
     </div>
-  )
+  );
 }
