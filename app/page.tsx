@@ -1,6 +1,6 @@
 "use client";
 
-import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin, FaAppStore, FaGooglePlay } from "react-icons/fa6";
 
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -20,16 +20,18 @@ import {
   Mail,
   Github,
   ExternalLink,
-  Star,
   GitFork,
   Code,
   Briefcase,
   GraduationCap,
   Award,
   DownloadIcon,
+  Globe,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { BsGooglePlay } from "react-icons/bs";
+
 
 const handleDownload = () => {
   const link = document.createElement("a");
@@ -55,11 +57,10 @@ const projects = [
     description:
       "A Complete mindfulness and wellness app with guided meditations, Customisations with Themes, and many wellness features like Podcasts, Talk To Me and Know Yourself. Built with Flutter and Node.JS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "Firebase", "NodeJs", "Provider"],
-    github: "https://thebeyondlifestyle.com",
-    demo: "https://demo.com",
-    stars: 45,
-    forks: 12,
+    technologies: ["Flutter", "Firebase", "Node JS", "Provider"],
+    website : "https://beyondlifestyle.com",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.tblstyle",
+    appStore: "https://apps.apple.com/in/app/the-beyond-lifestyle/id6478144849",
   },
   {
     id: 2,
@@ -68,10 +69,10 @@ const projects = [
       "Beautiful weather app with real-time data, 7-day forecast, and location-based weather updates. Clean UI with smooth animations.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Flutter", "OpenWeather API", "Bloc", "Hive"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    stars: 32,
-    forks: 8,
+    googlePlay: "https://github.com",
+    appStore: "https://demo.com",
+    website: "https://demo.com",
+    
   },
   {
     id: 3,
@@ -80,76 +81,46 @@ const projects = [
       "Productivity app for managing daily tasks with categories, reminders, and progress tracking. Supports offline functionality.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Flutter", "SQLite", "Provider", "Local Notifications"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    stars: 28,
-    forks: 6,
+       website : "https://beyondlifestyle.com",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.beyondlifestyle",
+    appStore: "https://apps.apple.com/app/beyond-lifestyle/id6444221230",
   },
 ];
 
 const experiences = [
   {
     id: 1,
-    company: "TechCorp Solutions",
-    position: "Flutter Developer",
+    company: "RAJMITH",
+    position: "Mobile App Developer",
     duration: "Jan 2023 - Present",
     description:
-      "Leading mobile app development team, architecting scalable Flutter applications, and mentoring junior developers.",
+      "Designed, Built, and maintained premium mobile applications using Flutter. Collaborated with cross-functional teams to define, design, and ship new features. Ensured the performance, quality, and responsiveness of applications.",
     achievements: [
       "Developed 5+ production Flutter apps with 100K+ downloads",
       "Reduced app crash rate by 40% through code optimization",
       "Implemented CI/CD pipeline reducing deployment time by 60%",
     ],
-  },
-  {
-    id: 2,
-    company: "StartupXYZ",
-    position: "Flutter Developer",
-    duration: "Jun 2021 - Dec 2022",
-    description:
-      "Built cross-platform mobile applications from scratch, collaborated with design team for pixel-perfect UI implementation.",
-    achievements: [
-      "Launched 3 successful mobile apps in fintech domain",
-      "Integrated 15+ third-party APIs and services",
-      "Maintained 98% app store rating across all projects",
-    ],
-  },
-  {
-    id: 3,
-    company: "Digital Agency Pro",
-    position: "Mobile App Developer",
-    duration: "Aug 2020 - May 2021",
-    description:
-      "Developed mobile applications for various clients, focusing on performance optimization and user experience.",
-    achievements: [
-      "Delivered 8+ client projects on time and within budget",
-      "Improved app performance by 35% through optimization",
-      "Received 'Developer of the Month' award twice",
-    ],
-  },
+  }
 ];
 
 const skills = [
   {
     category: "Mobile Development",
-    items: ["Flutter", "Dart", "Android", "iOS", "React Native"],
+    items: ["Flutter", "Dart", "Android", "iOS"],
   },
   {
     category: "Backend & APIs",
-    items: ["Firebase", "Node.js", "REST APIs", "GraphQL", "MongoDB"],
+    items: ["Firebase", "Node.js", "REST APIs", "MongoDB"],
   },
   {
     category: "State Management",
-    items: ["Provider", "Bloc", "Riverpod", "GetX", "Redux"],
+    items: ["Provider", "Riverpod", "GetX"],
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "Docker", "AWS", "Google Cloud", "Figma"],
-  },
-  {
-    category: "Testing",
-    items: ["Unit Testing", "Widget Testing", "Integration Testing", "Mockito"],
-  },
+    items: ["Git", "AWS", "Figma"],
+  }
+  
 ];
 
 ///CONTACT
@@ -206,57 +177,46 @@ export default function Portfolio() {
         return (
           <div className="space-y-6">
             {projects.map((project) => (
-              <Card key={project.id} className="overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-1/3">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 md:h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:w-2/3 p-6">
-                    <div className="flex items-start justify-between mb-3">
+              <Card key={project.id} className="px-5 py-5">
+
+                  
+                  <div className="px-5 py-5">
+                    <div className="flex items-start justify-between mb-5">
                       <CardTitle className="text-xl">{project.title}</CardTitle>
-                      <div className="flex gap-2">
-                        <Link
-                          href={project.github}
-                          className="text-muted-foreground hover:text-foreground"
-                        >
-                          <Github className="w-5 h-5" />
-                        </Link>
-                        <Link
-                          href={project.demo}
-                          className="text-muted-foreground hover:text-foreground"
-                        >
-                          <ExternalLink className="w-5 h-5" />
-                        </Link>
-                      </div>
+                      
                     </div>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-5 leading-relaxed">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-5">
                       {project.technologies.map((tech) => (
                         <Badge key={tech} variant="outline">
                           {tech}
                         </Badge>
                       ))}
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4" />
-                        {project.stars}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <GitFork className="w-4 h-4" />
-                        {project.forks}
-                      </div>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground pt-4">
+                      <Link
+                          href={project.appStore} target="blank"
+                          className="text-muted-foreground hover:text-foreground"
+                        >
+                          <FaAppStore className="w-5 h-5" />
+                        </Link>
+                      <Link
+                          href={project.googlePlay} target="blank"
+                          className="text-muted-foreground hover:text-foreground"
+                        >
+                          <BsGooglePlay className="w-5 h-5" />
+                        </Link>
+                      <Link
+                          href={project.website} target="blank"
+                          className="text-muted-foreground hover:text-foreground"
+                        >
+                          <Globe className="w-5 h-5" />
+                        </Link>
                     </div>
                   </div>
-                </div>
+
               </Card>
             ))}
           </div>
@@ -416,6 +376,7 @@ export default function Portfolio() {
           <div className="h-48 md:h-64 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+
           </div>
 
           {/* Profile Info */}
@@ -454,8 +415,8 @@ export default function Portfolio() {
 
             <div className="mt-4 space-y-3">
               <p className="text-lg pt-4">
-                🚀 Flutter Developer | 📱 Mobile App Enthusiast | 💻
-                Cross-platform Solutions Expert
+                Mobile App Developer  |  Flutter  |
+                 Cross-platform Solutions Expert
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-1 pb-1">
                 <div className="flex items-center gap-1">
@@ -479,12 +440,12 @@ export default function Portfolio() {
               </div>
               <div className="flex gap-4 text-sm pt-1 pb-1">
                 <span>
-                  <strong>10+</strong>{" "}
-                  <span className="text-muted-foreground">Projects</span>
+                  <strong>5+</strong>{" "}
+                  <span className="text-muted-foreground">Projects Done</span>
                 </span>
                 <span>
-                  <strong>1.2K</strong>{" "}
-                  <span className="text-muted-foreground">Followers</span>
+                  <strong>500+</strong>{" "}
+                  <span className="text-muted-foreground">Coffee Cups Consumed</span>
                 </span>
               </div>
             </div>
