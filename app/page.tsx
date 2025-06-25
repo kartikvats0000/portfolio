@@ -55,7 +55,7 @@ const projects = [
     description:
       "A Complete mindfulness and wellness app with guided meditations, Customisations with Themes, and many wellness features like Podcasts, Talk To Me and Know Yourself. Built with Flutter and Node.JS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "Firebase", "Node JS", "Provider"],
+    technologies: ["Flutter", "Firebase", "Node JS", "Provider", "In App Purchases"],
     website : "https://beyondlifestyle.com",
     googlePlay: "https://play.google.com/store/apps/details?id=com.tblstyle",
     appStore: "https://apps.apple.com/in/app/the-beyond-lifestyle/id6478144849",
@@ -66,7 +66,7 @@ const projects = [
     description:
       "Spiritual app for devotees of Mehandipur Balaji, offering temple information and community features, with key feature named Ram Naam on which people can chant the name of lord Ram and see other's activity too. Built with Flutter and Node.JS and utilised Socket.IO.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "NodeJS", "GetX", "Socket.IO"],
+    technologies: ["Flutter", "NodeJS", "GetX", "Socket.IO", "Firebase", "Google Mobile Ads", "AdMob"],
     googlePlay: "https://play.google.com/store/apps/details?id=com.mehandipurbalaji",
     appStore: "https://apps.apple.com/in/app/mehandipur-balaji/id6450503422",
     website: "https://mehandipurbalaji.app",
@@ -78,10 +78,21 @@ const projects = [
     description:
       "Mobile App to book charter planes directly from your phone. The app allows users to book charter flights, view available aircraft, and manage bookings seamlessly. Built with Flutter and NodeJS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX"],
+    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX", "Firebase" , "Razorpay"],
        website : "https://bigboyzklub.com",
     googlePlay: "https://play.google.com/store/apps/details?id=com.bigboyzklub",
     appStore: "https://apps.apple.com/in/app/big-boyz-klub-app/id6744999714",
+  },
+  {
+    id: 4,
+    title: "Ayumcure - Influencer App",
+    description:
+      "Ayumcure Influncer App is a platform which facilitates influencers to use their reach to earn money by promoting ayumcure products. The app allows influencers to track earnings, withdraw money and interact with the ayumcure team. Built with Flutter and NodeJS.",
+    image: "/placeholder.svg?height=200&width=300",
+    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX", "Razorpay"],
+       website : "https://ayumcure.com",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.ayumcure.influencer",
+    appStore: "https://apps.apple.com/az/app/ayumcure-influencer/id6743841909",
   },
 ];
 
@@ -116,7 +127,7 @@ const skills = [
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "AWS", "Figma"],
+    items: ["Git", "AWS", "Figma", "Postman", "Jira", "CI/CD" , "Payments Integration", "AdMob" , "In App Purchases"],
   }
   
 ];
@@ -371,6 +382,7 @@ export default function Portfolio() {
       <div>
         <div className="max-w-4xl mx-auto">
           {/* Cover Image */}
+          
           <div className="h-48 md:h-64 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

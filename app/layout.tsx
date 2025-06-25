@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Kartik Vats - Flutter Developer Portfolio",
-  description: "Flutter Developer specializing in cross-platform mobile applications",
+  description: "Flutter Developer specializing in cross-platform mobile applications development.",
 }
 
 export default function RootLayout({
