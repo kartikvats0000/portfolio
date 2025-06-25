@@ -1,6 +1,6 @@
 "use client";
 
-import { FaXTwitter, FaGithub, FaLinkedin, FaAppStore, FaGooglePlay } from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin, FaAppStore} from "react-icons/fa6";
 
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -18,8 +18,6 @@ import {
   LinkIcon,
   Calendar,
   Mail,
-  Github,
-  ExternalLink,
   GitFork,
   Code,
   Briefcase,
@@ -29,7 +27,7 @@ import {
   Globe,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { BsGooglePlay } from "react-icons/bs";
 
 
@@ -64,26 +62,26 @@ const projects = [
   },
   {
     id: 2,
-    title: "Weather Forecast App",
+    title: "Mehandipur Balaji App",
     description:
-      "Beautiful weather app with real-time data, 7-day forecast, and location-based weather updates. Clean UI with smooth animations.",
+      "Spiritual app for devotees of Mehandipur Balaji, offering temple information and community features, with key feature named Ram Naam on which people can chant the name of lord Ram and see other's activity too. Built with Flutter and Node.JS and utilised Socket.IO.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "OpenWeather API", "Bloc", "Hive"],
-    googlePlay: "https://github.com",
-    appStore: "https://demo.com",
-    website: "https://demo.com",
+    technologies: ["Flutter", "NodeJS", "GetX", "Socket.IO"],
+    googlePlay: "https://play.google.com/store/apps/details?id=com.mehandipurbalaji",
+    appStore: "https://apps.apple.com/in/app/mehandipur-balaji/id6450503422",
+    website: "https://mehandipurbalaji.app",
     
   },
   {
     id: 3,
-    title: "Task Management App",
+    title: "Big Boyz Klub",
     description:
-      "Productivity app for managing daily tasks with categories, reminders, and progress tracking. Supports offline functionality.",
+      "Mobile App to book charter planes directly from your phone. The app allows users to book charter flights, view available aircraft, and manage bookings seamlessly. Built with Flutter and NodeJS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "SQLite", "Provider", "Local Notifications"],
-       website : "https://beyondlifestyle.com",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.beyondlifestyle",
-    appStore: "https://apps.apple.com/app/beyond-lifestyle/id6444221230",
+    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX"],
+       website : "https://bigboyzklub.com",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.bigboyzklub",
+    appStore: "https://apps.apple.com/in/app/big-boyz-klub-app/id6744999714",
   },
 ];
 
