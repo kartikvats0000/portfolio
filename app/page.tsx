@@ -94,6 +94,28 @@ const projects = [
     googlePlay: "https://play.google.com/store/apps/details?id=com.ayumcure.influencer",
     appStore: "https://apps.apple.com/az/app/ayumcure-influencer/id6743841909",
   },
+  {
+    id: 5,
+    title: "Shri Dandi Ashram Shukrateerth",
+    description:
+      "Shri Dandi Ashram is an application dedicated to Dandi Ashram in Shukratal, Uttar Pradesh. Via this app, users can know about any upcoming event in ashram, donate to ashram and watch any live event. Built with Flutter and NodeJS.",
+    image: "/placeholder.svg?height=200&width=300",
+    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX"],
+       website : "https://shridandiashram.com",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.shridandiashram",
+    appStore: "https://apps.apple.com/in/app/shri-dandi-ashram-shukrateerth/id6748335227",
+  },
+  {
+    id: 6,
+    title: "Spiritual Bharat",
+    description:
+      "Spiritual Bharat is an E-Commerce platform. Users can buy various religious articles and books and scriptures. Built with Flutter, NextJS and NodeJS.",
+    image: "/placeholder.svg?height=200&width=300",
+    technologies: ["Flutter", "NodeJS", "MongoDB", "NextJS", "Razorpay"],
+       website : "https://shop.spiritualbharat.com",
+    googlePlay: "untitiled",
+    appStore: "untitled",
+  },
 ];
 
 const experiences = [
@@ -108,6 +130,7 @@ const experiences = [
       "Developed 5+ production Flutter apps with 100K+ downloads",
       "Reduced app crash rate by 40% through code optimization",
       "Implemented CI/CD pipeline reducing deployment time by 60%",
+      "Successfully launched 15+ mobile applications on both Google Play and Apple App Store, Often working as sole developer."
     ],
   }
 ];
@@ -436,16 +459,16 @@ export default function Portfolio() {
                 <div className="flex items-center gap-1">
                   <LinkIcon className="w-4 h-4" />
                   <Link
-                    href="https://kartikvats.com"
+                    href="https://linkedin.com/in/kartik-vats-flutter"
                     target="blank"
                     className="text-blue-500 hover:underline"
                   >
-                    kartikvats.com
+                    linkedin.com/in/kartik-vats-flutter
                   </Link>
                 </div>
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
-                  Joined August 2021
+                  Joined July 2022
                 </div>
               </div>
               <div className="flex gap-4 text-sm pt-1 pb-1">
