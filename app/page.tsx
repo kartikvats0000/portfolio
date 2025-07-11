@@ -122,8 +122,8 @@ const experiences = [
   {
     id: 1,
     company: "RAJMITH",
-    position: "Mobile App Developer",
-    duration: "Jan 2023 - Present",
+    position: "Mobile App Developer - Flutter",
+    duration: "Jul 2022 - Present",
     description:
       "Designed, Built, and maintained premium mobile applications using Flutter. Collaborated with cross-functional teams to define, design, and ship new features. Ensured the performance, quality, and responsiveness of applications.",
     achievements: [
