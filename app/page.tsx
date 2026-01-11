@@ -1,6 +1,6 @@
 "use client";
 
-import { FaXTwitter, FaGithub, FaLinkedin, FaAppStore} from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin, FaAppStore } from "react-icons/fa6";
 
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -50,13 +50,32 @@ const tabs = [
 
 const projects = [
   {
+    id: 0,
+    title: "Intellifi : Brain Games",
+    description:
+      "Built a mobile-based brain training and focus game platform aimed at reducing doomscrolling. Implemented custom UX components and interaction patterns to create a responsive, game-like experience. Iterated on usability, clarity, and first-time user experience to improve engagement",
+    image: "/placeholder.svg?height=200&width=300",
+    technologies: ["Flutter", "Dart", "Node.js", "Firebase", "REST APIs", "Cloud Functions", "Payment Integration"],
+    website: "https://intellifi.kaladigm.com",
+    appStore: "https://apps.apple.com/us/app/intellifi-brain-games/id6757127055"
+  },
+  {
+    id: -1,
+    title: "Ocean of Tools",
+    description:
+      "Built a website to provide a platform for users to access a wide range of tools and resources for their daily tasks. The website features a user-friendly interface with a clean and modern design, and includes a search bar to help users find the tools they need. The website also includes a section for user reviews and ratings, as well as a section for user testimonials. Built with NextJS and TailwindCSS.",
+    image: "/placeholder.svg?height=200&width=300",
+    technologies: ["NextJS", "TailwindCSS", "Node.js", "Firebase"],
+    website: "https://oceanoftools.com",
+  },
+  {
     id: 1,
     title: "The Beyond Lifestyle App",
     description:
       "A Complete mindfulness and wellness app with guided meditations, Customisations with Themes, and many wellness features like Podcasts, Talk To Me and Know Yourself. Built with Flutter and Node.JS.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Flutter", "Firebase", "Node JS", "Provider", "In App Purchases"],
-    website : "https://beyondlifestyle.com",
+    website: "https://beyondlifestyle.com",
     googlePlay: "https://play.google.com/store/apps/details?id=com.tblstyle",
     appStore: "https://apps.apple.com/in/app/the-beyond-lifestyle/id6478144849",
   },
@@ -70,7 +89,7 @@ const projects = [
     googlePlay: "https://play.google.com/store/apps/details?id=com.mehandipurbalaji",
     appStore: "https://apps.apple.com/in/app/mehandipur-balaji/id6450503422",
     website: "https://mehandipurbalaji.app",
-    
+
   },
   {
     id: 3,
@@ -78,8 +97,8 @@ const projects = [
     description:
       "Mobile App to book charter planes directly from your phone. The app allows users to book charter flights, view available aircraft, and manage bookings seamlessly. Built with Flutter and NodeJS.",
     image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX", "Firebase" , "Razorpay"],
-       website : "https://bigboyzklub.com",
+    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX", "Firebase", "Razorpay"],
+    website: "https://bigboyzklub.com",
     googlePlay: "https://play.google.com/store/apps/details?id=com.bigboyzklub",
     appStore: "https://apps.apple.com/in/app/big-boyz-klub-app/id6744999714",
   },
@@ -90,44 +109,23 @@ const projects = [
       "Ayumcure Influncer App is a platform which facilitates influencers to use their reach to earn money by promoting ayumcure products. The app allows influencers to track earnings, withdraw money and interact with the ayumcure team. Built with Flutter and NodeJS.",
     image: "/placeholder.svg?height=200&width=300",
     technologies: ["Flutter", "NodeJS", "MongoDB", "GetX", "Razorpay"],
-       website : "https://ayumcure.com",
+    website: "https://ayumcure.com",
     googlePlay: "https://play.google.com/store/apps/details?id=com.ayumcure.influencer",
     appStore: "https://apps.apple.com/az/app/ayumcure-influencer/id6743841909",
-  },
-  {
-    id: 5,
-    title: "Shri Dandi Ashram Shukrateerth",
-    description:
-      "Shri Dandi Ashram is an application dedicated to Dandi Ashram in Shukratal, Uttar Pradesh. Via this app, users can know about any upcoming event in ashram, donate to ashram and watch any live event. Built with Flutter and NodeJS.",
-    image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "NodeJS", "MongoDB", "GetX"],
-       website : "https://shridandiashram.com",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.shridandiashram",
-    appStore: "https://apps.apple.com/in/app/shri-dandi-ashram-shukrateerth/id6748335227",
-  },
-  {
-    id: 6,
-    title: "Spiritual Bharat",
-    description:
-      "Spiritual Bharat is an E-Commerce platform. Users can buy various religious articles and books and scriptures. Built with Flutter, NextJS and NodeJS.",
-    image: "/placeholder.svg?height=200&width=300",
-    technologies: ["Flutter", "NodeJS", "MongoDB", "NextJS", "Razorpay"],
-       website : "https://shop.spiritualbharat.com",
-    googlePlay: "untitiled",
-    appStore: "untitled",
-  },
+  }
+
 ];
 
 const experiences = [
   {
     id: 1,
     company: "RAJMITH",
-    position: "Mobile App Developer - Flutter",
+    position: "Senior Software Engineer - Mobile Platform",
     duration: "Jul 2022 - Present",
     description:
-      "Designed, Built, and maintained premium mobile applications using Flutter. Collaborated with cross-functional teams to define, design, and ship new features. Ensured the performance, quality, and responsiveness of applications.",
+      "Designed and Developed software solutions for mobile platforms. Collaborated with cross-functional teams to define, design, and ship new features. Ensured the performance, quality, and responsiveness of applications.",
     achievements: [
-      "Developed 5+ production Flutter apps with 100K+ downloads",
+      "Developed 5+ production Software with 50K+ downloads",
       "Reduced app crash rate by 40% through code optimization",
       "Implemented CI/CD pipeline reducing deployment time by 60%",
       "Successfully launched 15+ mobile applications on both Google Play and Apple App Store, Often working as sole developer."
@@ -137,7 +135,11 @@ const experiences = [
 
 const skills = [
   {
-    category: "Mobile Development",
+    category: "Languages",
+    items: ["Java", "Dart", "JavaScript", "TypeScript", "Python", "C++", "Rust"],
+  },
+  {
+    category: "Software Development",
     items: ["Flutter", "Dart", "Android", "iOS"],
   },
   {
@@ -150,9 +152,9 @@ const skills = [
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "AWS", "Figma", "Postman", "Jira", "CI/CD" , "Payments Integration", "AdMob" , "In App Purchases"],
+    items: ["Git", "AWS", "Figma", "Postman", "Jira", "CI/CD", "Payments Integration", "AdMob", "In App Purchases"],
   }
-  
+
 ];
 
 ///CONTACT
@@ -178,9 +180,9 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Hi, I’m Kartik Vats — an app developer with nearly three years
+                  Hi, I’m Kartik Vats — an Software Engineer with nearly three years
                   of experience building and maintaining thoughtful and
-                  functional mobile applications. My work focuses on creating
+                  functional software. My work focuses on creating
                   tools that genuinely help users, whether it’s a productivity
                   app, a wellness tool, or something in between. I enjoy turning
                   ideas into polished, real-world products that work smoothly
@@ -195,10 +197,10 @@ export default function Portfolio() {
                   also feel good to use.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-4">
-                  <Badge variant="secondary">🛠️ Builds Real-World Apps</Badge>
-                  <Badge variant="secondary">⚡ Fast & Clean Code</Badge>
-                  <Badge variant="secondary">📲 Thoughtful Mobile Experiences</Badge>
-                  <Badge variant="secondary">🧠 Design-Driven Thinking</Badge>
+                  <Badge variant="secondary">Builds Real-World Software</Badge>
+                  <Badge variant="secondary">Fast & Clean Code</Badge>
+                  <Badge variant="secondary">Thoughtful User Experience</Badge>
+                  <Badge variant="secondary">Design-Driven Thinking</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -211,43 +213,49 @@ export default function Portfolio() {
             {projects.map((project) => (
               <Card key={project.id} className="px-5 py-5">
 
-                  
-                  <div className="px-5 py-5">
-                    <div className="flex items-start justify-between mb-5">
-                      <CardTitle className="text-xl">{project.title}</CardTitle>
-                      
-                    </div>
-                    <p className="text-muted-foreground mb-5 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="outline">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground pt-4">
-                      <Link
-                          href={project.appStore} target="blank"
-                          className="text-muted-foreground hover:text-foreground"
-                        >
-                          <FaAppStore className="w-5 h-5" />
-                        </Link>
-                      <Link
-                          href={project.googlePlay} target="blank"
-                          className="text-muted-foreground hover:text-foreground"
-                        >
-                          <BsGooglePlay className="w-5 h-5" />
-                        </Link>
-                      <Link
-                          href={project.website} target="blank"
-                          className="text-muted-foreground hover:text-foreground"
-                        >
-                          <Globe className="w-5 h-5" />
-                        </Link>
-                    </div>
+
+                <div className="px-5 py-5">
+                  <div className="flex items-start justify-between mb-5">
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+
                   </div>
+                  <p className="text-muted-foreground mb-5 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground pt-4">
+                    {project.appStore && (
+                      <Link
+                        href={project.appStore} target="blank"
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        <FaAppStore className="w-5 h-5" />
+                      </Link>
+                    )}
+                    {project.googlePlay && (
+                      <Link
+                        href={project.googlePlay} target="blank"
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        <BsGooglePlay className="w-5 h-5" />
+                      </Link>
+                    )}
+                    {project.website && (
+                      <Link
+                        href={project.website} target="blank"
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        <Globe className="w-5 h-5" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
 
               </Card>
             ))}
@@ -405,11 +413,15 @@ export default function Portfolio() {
       <div>
         <div className="max-w-4xl mx-auto">
           {/* Cover Image */}
-          
-          <div className="h-48 md:h-64 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
+
+          <div className="h-48 md:h-64 relative overflow-hidden">
+            <img
+              src="/bg.jpg"
+              alt="Cover"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-
           </div>
 
           {/* Profile Info */}
@@ -449,7 +461,7 @@ export default function Portfolio() {
             <div className="mt-4 space-y-3">
               <p className="text-lg pt-4">
                 Mobile App Developer  |  Flutter  |
-                 Cross-platform Solutions Expert
+                Cross-platform Solutions Expert
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-1 pb-1">
                 <div className="flex items-center gap-1">
@@ -496,11 +508,10 @@ export default function Portfolio() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
-                    activeTab === tab.id
-                      ? "border-blue-500 text-blue-500"
-                      : "border-transparent text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`flex items-center gap-2 px-4 py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${activeTab === tab.id
+                    ? "border-blue-500 text-blue-500"
+                    : "border-transparent text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   <Icon className="w-4 h-4" />
                   {tab.label}
