@@ -460,8 +460,7 @@ export default function Portfolio() {
 
             <div className="mt-4 space-y-3">
               <p className="text-lg pt-4">
-                Mobile App Developer  |  Flutter  |
-                Cross-platform Solutions Expert
+                Software Engineer
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pt-1 pb-1">
                 <div className="flex items-center gap-1">
